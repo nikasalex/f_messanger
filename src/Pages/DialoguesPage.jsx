@@ -14,7 +14,7 @@ export function DialoguesPage() {
  const dialogueId = location.pathname.split('dialogues/')[1];
  useEffect(()=>{
   axios
-  .get('http://localhost:3001/user', {
+  .get('http://mykyta-matvieiev.com:3001/user', {
     withCredentials: true,
   })
   .then((data) => {

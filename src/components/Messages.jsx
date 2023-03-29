@@ -29,7 +29,7 @@ useEffect(()=>{
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/dialogue/${dialogueId}`, {
+      .get(`http://mykyta-matvieiev.com:3001/dialogue/${dialogueId}`, {
         withCredentials: true,
       })
       .then((data) => {
@@ -45,7 +45,7 @@ useEffect(()=>{
 
   const onFinish = (values) => {
     axios
-      .post(`http://localhost:3001/dialogue/${dialogueId}`, values, {
+      .post(`http://mykyta-matvieiev.com:3001/dialogue/${dialogueId}`, values, {
         withCredentials: true,
       })
       .then((data) => {
@@ -57,7 +57,7 @@ useEffect(()=>{
   };
   const onDelete = () => {
     axios
-      .get(`http://localhost:3001/dialogue/removemsg/${dialogueId}`, {
+      .get(`http://mykyta-matvieiev.com:3001/dialogue/removemsg/${dialogueId}`, {
         withCredentials: true,
       })
       .then((data) => {

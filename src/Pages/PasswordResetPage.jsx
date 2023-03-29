@@ -1,5 +1,5 @@
 import { Button, Form, Input, Space, Alert } from 'antd';
-import { useLocation, useNavigate, } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
 
@@ -11,7 +11,7 @@ export function PasswordResetPage() {
   const onFinish = (values) => {
     values.token = token
     axios
-    .post('http://localhost:3001/passwordreset', values, {
+    .post('http://mykyta-matvieiev.com:3001/passwordreset', values, {
       withCredentials: true,
     })
     .then((data) => {
@@ -35,7 +35,7 @@ export function PasswordResetPage() {
     console.log('Failed:', errorInfo);
   };
 
-  const navigate = useNavigate();
+
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const token = searchParams.get('token');

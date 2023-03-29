@@ -64,7 +64,7 @@ export function Dialogues() {
   const [open, setOpen] = useState(false);
   const onCreate = (values) => {
     axios
-      .post('http://localhost:3001/dialogues', values, {
+      .post('http://mykyta-matvieiev.com:3001/dialogues', values, {
         withCredentials: true,
       })
       .then((data) => {
@@ -98,7 +98,7 @@ export function Dialogues() {
   })
   useEffect(() => {
     axios
-    .get('http://localhost:3001/dialogues', { withCredentials: true })
+    .get('http://mykyta-matvieiev.com:3001/dialogues', { withCredentials: true })
     .then((data) => {
       setDialogues(data.data);
       });
@@ -106,7 +106,7 @@ export function Dialogues() {
 
   const onDelete = () => {
     axios
-      .get(`http://localhost:3001/dialogue/removedialogue/${dialogueId}`, {
+      .get(`http://mykyta-matvieiev.com:3001/dialogue/removedialogue/${dialogueId}`, {
         withCredentials: true,
       })
       .then((data) => {

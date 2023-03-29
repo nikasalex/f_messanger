@@ -7,7 +7,7 @@ export function SignUpPage() {
   const [message, setMessage] = useState('');
   const onFinish = (values) => {
     axios
-      .post('http://localhost:3001/signup', values, {
+      .post('http://mykyta-matvieiev.com:3001/signup', values, {
         withCredentials: true,
       })
       .then((data) => {

@@ -8,7 +8,7 @@ export function ForgotPassPage() {
   const [message, setMessage] = useState('');
   const onFinish = (values) => {
     axios
-    .post('http://localhost:3001/forgotpass', values, {
+    .post('http://mykyta-matvieiev.com:3001/forgotpass', values, {
       withCredentials: true,
     }).then(data=>{
       setMessage(data.data.message);

@@ -11,7 +11,7 @@ export function LoginPage() {
   
   const onFinish = (values) => {
     axios
-      .post('http://localhost:3001/login', values, {
+      .post('http://mykyta-matvieiev.com:3001/login', values, {
         withCredentials: true,
       })
       .then((data) => {
@@ -43,7 +43,7 @@ export function LoginPage() {
 
   const navigate = useNavigate();
   axios
-    .get('http://localhost:3001/user', {
+    .get('http://mykyta-matvieiev.com:3001/user', {
       withCredentials: true,
     })
     .then((data) => {
